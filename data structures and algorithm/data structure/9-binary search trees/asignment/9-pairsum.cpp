@@ -105,12 +105,14 @@ void printLevelWise(binarytreenode<int> *root)
 
     return 1 + countnodes(root->left) + countnodes(root->right);
 }
+//to know how this pushing procedure is done using stack,see the stack series lecture 51,52 of striver series .
 void printNodesSumToS(binarytreenode<int> *root, int s)
 {
 
     int totalnodes = countnodes(root);
     int count = 0;
 
+//in stack the max no of element that can be present in both stack can be equal to the height of the stack so the space complexity will be log(n )
     stack<binarytreenode<int> *> inorder;
     stack<binarytreenode<int> *> revinorder;
 

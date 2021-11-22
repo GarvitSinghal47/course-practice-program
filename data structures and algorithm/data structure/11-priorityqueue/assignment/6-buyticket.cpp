@@ -17,7 +17,10 @@ int buyTicket(int *arr, int n, int k)
 
     int time = 0;
 
-    while (p.front() != k || pq.top() != arr[p.front()]) //unless ticket counter meets me and i am the priority .
+//it will happen when the element present at that index is also at the top of the queue .
+//this will run until we reach the element of our required priority.
+//this will remove the element of highest priority until the index and the element required is not matched.
+    while (p.front() != k|| pq.top() != arr[p.front()]) //unless ticket counter meets me and i am the priority .
     {                                                    //if less priority send at end of queue
         if (pq.top() > arr[p.front()])
         {
